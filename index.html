@@ -2,15 +2,32 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow, noarchive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="池田 智敦｜フロントエンドエンジニア / Webコーダー。実務経験5年。スピーディーなコーディングとWordPressの独自テーマ構築・カスタマイズに対応。">
   <meta name="theme-color" content="#101720">
   <title>池田 智敦 — Front-end Engineer & Coder</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%237aabff'/%3E%3Cpath d='M16 10h8v20h-8z' fill='%23101720'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css">
+  <script src="access-config.js" defer></script>
   <script src="script.js" defer></script>
 </head>
 <body>
+  <section class="access-gate" id="access-gate" aria-labelledby="access-title">
+    <div class="access-card">
+      <p class="eyebrow"><span class="accent">//</span> PRIVATE PORTFOLIO</p>
+      <h1 id="access-title">Portfolio access</h1>
+      <p>閲覧用のパスワードを入力してください。</p>
+      <form id="access-form">
+        <label for="access-password">パスワード</label>
+        <input id="access-password" type="password" autocomplete="current-password" required aria-describedby="access-message">
+        <button type="submit" class="primary-link">ポートフォリオを見る <span aria-hidden="true">↗</span></button>
+        <p id="access-message" role="status" aria-live="polite"></p>
+      </form>
+      <noscript><p>閲覧するにはJavaScriptを有効にしてください。</p></noscript>
+    </div>
+  </section>
+  <div id="portfolio-content" hidden>
   <a class="skip-link" href="#main">コンテンツへスキップ</a>
   <header class="header wrap">
     <a class="wordmark" href="#" aria-label="トップへ"><span class="brand-bracket">&lt;</span>IKEDA<span class="brand-bracket"> /&gt;</span></a>
@@ -44,6 +61,7 @@
     </section>
     <section class="work wrap section" id="work" aria-labelledby="work-title">
       <div class="section-heading"><h2 id="work-title"><span class="section-number">01 /</span> Selected work</h2><span class="muted">Web制作・コーディング実績</span></div>
+      <p class="work-intro">これまでに<strong>100件以上のWeb制作に参画</strong>してきました。その中から、代表的な4件の実績をご紹介します。</p>
       <div class="projects">
         <a class="project" href="https://willows.co.jp/" target="_blank" rel="noopener noreferrer" aria-label="株式会社ウィローズのサイトを見る（新しいタブ）">
           <div class="site-preview willows"><div class="preview-bar"><span class="window-dots" aria-hidden="true">•••</span><span>willows.co.jp</span><span aria-hidden="true">↗</span></div><img src="assets/willows.png" alt="株式会社ウィローズのWebサイト" width="1440" height="1000" loading="lazy"><span class="visit-site">VISIT WEBSITE ↗</span></div>
@@ -83,8 +101,9 @@
         </div>
       </div>
     </section>
-    <section class="contact wrap section" id="contact" aria-labelledby="contact-title"><div class="section-label"><span class="section-number">03 /</span> CONTACT</div><div class="contact-row"><div><h2 id="contact-title">次の制作を、一緒に。</h2><p>Webサイトのコーディング・実装のご相談はこちら。</p></div><div><a class="email" href="mailto:c.ikeda@corvo-cro.com">c.ikeda@corvo-cro.com <span aria-hidden="true">↗</span></a><span class="email-note">メールでお問い合わせいただけます。</span></div></div></section>
+    <section class="contact wrap section" id="contact" aria-labelledby="contact-title"><div class="section-label"><span class="section-number">03 /</span> CONTACT</div><div class="contact-row"><div><h2 id="contact-title">次の制作を、一緒に。</h2><p>Webサイトのコーディング・実装のご相談はこちら。</p></div><div><a class="email" href="mailto:c.ikeda@corvo-cro.com" aria-label="池田 智敦へメールを送る（メールアプリが開きます）">c.ikeda@corvo-cro.com <span aria-hidden="true">↗</span></a><span class="email-note">クリックするとメールアプリが開きます。</span></div></div></section>
   </main>
   <footer class="footer wrap"><span>© <span id="year">2026</span> 池田 智敦</span><span>CODED WITH CARE.</span><a href="#">BACK TO TOP ↑</a></footer>
+  </div>
 </body>
 </html>
